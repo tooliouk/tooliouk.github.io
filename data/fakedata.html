@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../scripts.js"></script>
+
+<html>
+
+<head>
+    <title>Fake Data Generator</title>
+</head>
+
+<body>
+    <center><h1>Fake Data Generator</h1></center>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
+        <label for="Fname">Fake First Name:</label>
+        <input type="text" id="Fname" readonly>
+        <button onclick="generateFirstName()">Generate</button>
+        <button onclick="copyText(document.getElementById('Fname'))">Copy First Name</button>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
+        <label for="Lname">Fake Last Name:</label>
+        <input type="text" id="Lname" readonly>
+        <button onclick="generateLastName()">Generate</button>
+        <button onclick="copyText(document.getElementById('Lname'))">Copy Last Name</button>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
+        <label for="email">Fake Email:</label>
+        <input type="text" id="email" readonly>
+        <button onclick="generateEmail()">Generate</button>
+        <button onclick="copyText(document.getElementById('email'))">Copy Email</button>
+    </div>
+    <center><img src="../images/DISCLAIMER.png" alt="THESE EMAILS DO NOT WORK" style="width: 30%; height: 30%;"></center>
+</body>
+
+</html>

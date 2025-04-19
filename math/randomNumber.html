@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../scripts.js"></script>
+<html>
+
+<head>
+    <title>Random Number Generator</title>
+</head>
+
+<body>
+    <center><h1>Random Number Generator</h1></center>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <form onsubmit="randomNumber(); return false;" style="display: flex; flex-direction: column; align-items: center;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <label for="min" style="font-family: Coolvetica;">Minimum Value:</label>
+                <input type="number" id="min">
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
+                <label for="max" style="font-family: Coolvetica;">Maximum Value:</label>
+                <input type="number" id="max">
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin-top: 10px;">
+                <label for="result" style="font-family: Coolvetica;">Result:</label>
+                <input type="number" id="result" readonly>
+            </div>
+            <button class="button-34" role="button" type="button" style="margin-top: 10px;" onclick="randomNumber()">Generate Random Number</button>
+        </form>
+    </div>    
+    
+</body>
+
+</html>

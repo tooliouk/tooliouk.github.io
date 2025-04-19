@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="../style.css">
+
+<script src="../scripts.js"></script>
+<html>
+
+<head>
+    <title>Split A String</title>
+</head>
+
+<body>
+    <h1><center>Split A String</center></h1>
+    <form>
+        <div style="display: flex; justify-content: center; gap: 20px;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <label for="str">String to split:</label>
+                <textarea name="str" id="str" rows="20" cols="50"></textarea>
+            </div>
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <label for="chunks">String in chunks:</label>
+                <textarea name="chunks" id="chunks" rows="20" cols="50" readonly></textarea>
+            </div>
+        </div>
+        
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <button class="button-24" role="button" onclick="splitstr()" type="button">Get the string in chunks</button>
+        </div>        
+    </form>
+</body>
+</html>

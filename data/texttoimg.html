@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Text to Image Generator</title>
+
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="../scripts.js"></script>
+
+</head>
+<body>
+
+  <center>
+
+    <h1>Text to Image Generator</h1>
+
+    <input type="text" id="userText" placeholder="Enter your text here" size="40">
+
+    <br><br>
+
+    <button class="button-24" role="button" onclick="generateImage()" type="button">Generate Image</button>
+
+    <br><br>
+
+    <canvas id="myCanvas" width="600" height="200"></canvas>
+
+    <br><br>
+
+    <a id="download" download="text-image.png">
+      <button class="button-24" role="button">Download Image</button>
+    </a>
+
+  </center>
+
+</body>
+</html>

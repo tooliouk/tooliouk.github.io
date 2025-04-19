@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../scripts.js"></script>
+<html>
+
+<head> 
+    <title>Word And Character Counter</title>
+</head>
+
+<body>
+    <center><h1>Count The Characters In A String</h1></center>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <textarea name="stringC" id="stringC" placeholder="Write here..." style="width: 700px; height: 250px;"></textarea>
+    </div>
+    
+    <center>
+        <label for="charNum">Characters:</label>
+        <input type="number" readonly id="charNum">
+    
+        <label for="wordNum">Words:</label>
+        <input type="number" readonly id="wordNum">
+    </center>
+    
+    <center>
+        <button class="button-24" role="button" onclick="count()" type="button">Find Measurements</button>
+    </center>
+    
+</body>
+
+</html>

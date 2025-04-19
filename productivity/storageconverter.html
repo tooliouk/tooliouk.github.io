@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="../style.css">
+<script src="../scripts.js"></script>
+<html>
+
+<head>
+    <title>Computer Storage Converter</title>
+</head>
+
+<body>
+    <center><h1>Storage Converter</h1></center>
+    <div>
+        <div class="unitcaption">From</div>
+        <div class="unitarea">
+            <input type="number" style="border-radius: 4px; flex: 1;" id="fromNum">
+            <select style="flex: 1;" id="fromUnit">
+                <option value="B">Bytes [b]</option>
+                <option value="kB">Kilobytes [kb]</option>
+                <option value="MB">Megabytes [mb]</option>
+                <option value="GB">Gigabytes [gb]</option>
+                <option value="TB">Terabytes [tb]</option>
+            </select>
+        </div>
+    </div>
+    
+    <div>
+        <div class="unitcaption">To</div>
+        <div class="unitarea">
+            <input type="number" style="border-radius: 4px; flex: 1;" readonly id="toNum">
+            <select style="flex: 1;" id="toUnit">
+                <option value="B">Bytes [b]</option>
+                <option value="kB">Kilobytes [kb]</option>
+                <option value="MB">Megabytes [mb]</option>
+                <option value="GB">Gigabytes [gb]</option>
+                <option value="TB">Terabytes [tb]</option>
+            </select>
+        </div>
+    </div>
+    
+    <center><button class="button-24" role="button" onclick="convertStorage()" type="button">Convert Storage</button></center>
+    
+</body>
+
+</html>
