@@ -212,54 +212,56 @@ function copyText(text) {
 const canvas = document.getElementById("whiteboard");
 const context = canvas.getContext("2d");
 
+// Set default brush settings
+context.strokeStyle = "#000000";
+context.lineWidth = 5;
+context.lineCap = "round"; 
+
 let drawing = false;
 
-canvas.addEventListener("mousedown", () => {
-  drawing = true;
-  context.beginPath();
+// Start drawing
+canvas.addEventListener("mousedown", (e) => {
+    drawing = true;
+    context.beginPath();
+    context.moveTo(e.offsetX, e.offsetY);
 });
 
+// Drawing while moving mouse
+canvas.addEventListener("mousemove", (e) => {
+    if (!drawing) return;
+    context.lineTo(e.offsetX, e.offsetY);
+    context.stroke();
+});
+
+// Stop drawing
 canvas.addEventListener("mouseup", () => {
-  drawing = false;
-  context.closePath();
+    drawing = false;
 });
 
-canvas.addEventListener("mousemove", draw);
-
-function draw(e) {
-  if (!drawing) return;
-
-  context.lineCap = "round";
-
-  context.lineTo(
-    e.clientX - canvas.getBoundingClientRect().left,
-    e.clientY - canvas.getBoundingClientRect().top
-  );
-  context.stroke();
-  context.beginPath();
-  context.moveTo(
-    e.clientX - canvas.getBoundingClientRect().left,
-    e.clientY - canvas.getBoundingClientRect().top
-  );
-}
-
-//clear
+// Clear canvas
 const clearButton = document.getElementById("clear-btn");
-
 clearButton.addEventListener("click", () => {
-  context.clearRect(0, 0, canvas.width, canvas.height);
+    context.clearRect(0, 0, canvas.width, canvas.height);
 });
 
-//colour picker
+// Change color
 const colorPicker = document.getElementById("color-picker");
-
 colorPicker.addEventListener("input", (e) => {
-  context.strokeStyle = e.target.value;
+    context.strokeStyle = e.target.value;
 });
 
-// brush size
+// Change brush size
 const brushSizeInput = document.getElementById("brush-size");
-
 brushSizeInput.addEventListener("input", (e) => {
-  context.lineWidth = e.target.value;
+    context.lineWidth = e.target.value;
+});
+
+// Download the drawing
+const downloadButton = document.getElementById("download-btn");
+downloadButton.addEventListener("click", () => {
+    const image = canvas.toDataURL("image/png");
+    const link = document.createElement("a");
+    link.href = image;
+    link.download = "drawing.png"; 
+    link.click();
 });

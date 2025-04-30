@@ -221,7 +221,6 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  background: linear-gradient(125deg, #67a5f5, #f3bbe0, #64a0e4, #d364e4);
   border-radius: 10px;
   padding: 10px;
 }
