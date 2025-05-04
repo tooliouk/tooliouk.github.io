@@ -1,7 +1,3 @@
-// modules
-
-
-
 // sum
 
 function sumNumbers() {
@@ -265,3 +261,21 @@ downloadButton.addEventListener("click", () => {
     link.download = "drawing.png"; 
     link.click();
 });
+
+// canvas
+function generateColor() {
+    const canvas = document.getElementById("canvasC");
+    const ctx = canvas.getContext("2d");
+    const colour = document.getElementById("colourC").value;
+    ctx.fillStyle = colour;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
+
+  function downloadImage() {
+    const canvas = document.getElementById("canvasC");
+    const link = document.createElement('a');
+    link.download = 'colour-image.png';
+    link.href = canvas.toDataURL();
+    link.click();
+  }
+
